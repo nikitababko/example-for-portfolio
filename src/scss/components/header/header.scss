@@ -1,11 +1,19 @@
+.active {
+    color: $red !important;
+}
+
 .header-wrapper {
-    background: #181818;
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    z-index: 10;
+    z-index: 3;
     padding: 25px;
+    background: #181818;
+}
+
+.header-wrapper_fixed {
+    position: fixed;
 }
 
 .header {

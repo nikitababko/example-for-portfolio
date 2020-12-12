@@ -1,0 +1,16 @@
+@media screen and (max-width: 1200px) {
+    .projects__content {
+        flex-direction: column;
+
+        &-item {
+            margin: 20px 0;
+            align-self: center;
+        }
+
+        .section__btn-wrapper {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+        }
+    }
+}

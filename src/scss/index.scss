@@ -4,14 +4,25 @@
 @import "./utils/mixins.scss";
 
 @import "./components/header/header.scss";
-@import "./components/intro/intro.scss";
+@import "./components/home/home.scss";
 @import "./components/about/about.scss";
 @import "./components/skills/skills.scss";
 @import "./components/projects/projects.scss";
 @import "./components/contact/contact.scss";
 @import "./components/footer/footer.scss";
 
+// Media
+@import "./components/header/media.scss";
+@import "./components/home/media.scss";
+@import "./components/projects/media.scss";
+@import "./components/contact/media.scss";
+
+html {
+    scroll-behavior: smooth;
+}
+
 .page-wrap {
+    overflow-x: hidden;
     position: relative;
     padding-bottom: 200px;
     background-color: #1d1d1d;
@@ -56,7 +67,7 @@
 }
 
 .section {
-    padding: 100px 150px 100px 50px;
+    padding: 100px 0px 100px 50px;
 
     &__title {
         margin-bottom: 100px;
@@ -125,5 +136,11 @@
         @include markup-bot;
         content: "</button>";
         bottom: -50px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .section {
+        padding: 100px 0;
     }
 }

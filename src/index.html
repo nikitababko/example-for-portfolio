@@ -6,6 +6,7 @@
         <title>Babko</title>
         <link rel="icon" type="image/png" href="./img/app/favicon.png" />
         <link rel="stylesheet" href="./css/index.css" />
+        <script defer src="./js/header.js"></script>
         <script defer src="./js/form.js"></script>
         <script
             crossorigin="anonymous"
@@ -20,38 +21,51 @@
                 <div class="header-wrapper">
                     <header class="header">
                         <div class="logo-wrapper">
-                            <a class="logo" href="#">Nikita</a>
+                            <a class="logo" href="#home">Nikita</a>
                         </div>
                         <nav class="nav">
                             <ul>
-                                <li><a href="#">About me</a></li>
-                                <li><a href="#">Skills</a></li>
-                                <li><a href="#">Projects</a></li>
-                                <li><a href="#">Contact me</a></li>
+                                <li><a href="#about" class="link-about">About me</a></li>
+                                <li><a href="#skills" class="link-skills">Skills</a></li>
+                                <li>
+                                    <a href="#projects" class="link-projects">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="#contact" class="link-contact">Contact me</a>
+                                </li>
                             </ul>
                         </nav>
+                        <div class="burger-btn-wrapper">
+                            <div class="burger-btn"></div>
+                        </div>
                     </header>
                 </div>
 
-                <!-- intro -->
-                <section class="intro section">
-                    <div class="intro__inner">
+                <!-- home -->
+                <section class="home section" id="home">
+                    <div class="home__inner">
                         <span class="markup markup_top">&lt;html&gt;</span>
                         <span class="markup markup_top">&lt;body&gt;</span>
-                        <h1 class="intro__title">
-                            Hi, I'm <span>Nikita</span><br />Web developer
-                        </h1>
-                        <div class="section__btn-wrapper">
-                            <a class="section__btn" href="#">Contact me</a>
+                        <div class="home__title-wrapper">
+                            <h1 class="home__title">
+                                Hi, I'm <span>Nikita</span><br />Web developer
+                            </h1>
                         </div>
-                        <div class="intro__avatar">
-                            <img src="./img/intro/avatar.png" alt="avatar" />
+                        <div class="section__btn-wrapper">
+                            <a class="section__btn" href="#contact">Contact me</a>
+                        </div>
+                        <div class="home__avatar-wrapper">
+                            <img
+                                class="home__avatar"
+                                src="./img/home/avatar.png"
+                                alt="avatar"
+                            />
                         </div>
                     </div>
                 </section>
 
                 <!-- about -->
-                <section class="section">
+                <section class="section" id="about">
                     <div class="about">
                         <h2 class="section__title">About me</h2>
                         <p class="section__text">
@@ -79,7 +93,7 @@
                 </section>
 
                 <!-- skills -->
-                <section class="section">
+                <section class="section" id="skills">
                     <div class="skills">
                         <h2 class="section__title">Skills & Experience</h2>
                         <p class="section__text">
@@ -133,7 +147,7 @@
                 </section>
 
                 <!-- projects -->
-                <section class="section section_projects">
+                <section class="section" id="projects">
                     <div class="projects">
                         <h2 class="section__title">Projects</h2>
 
@@ -224,7 +238,7 @@
                 </section>
 
                 <!-- contact -->
-                <section class="section section_contacts">
+                <section class="section section_contacts" id="contact">
                     <div class="contact">
                         <h2 class="section__title">Contact me</h2>
                         <form

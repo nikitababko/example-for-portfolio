@@ -1,0 +1,20 @@
+@media screen and (max-width: 1200px) {
+    .form {
+        width: 500px;
+
+        &__first-name,
+        &__last-name,
+        &__email,
+        &__subject {
+            input {
+                width: 340px;
+            }
+        }
+
+        &__message {
+            textarea {
+                width: 340px;
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-.intro {
+.home {
     position: relative;
     height: 100vh;
 
@@ -57,7 +57,7 @@
         }
     }
 
-    &__avatar {
+    &__avatar-wrapper {
         display: flex;
         justify-content: start;
     }

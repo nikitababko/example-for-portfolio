@@ -1,0 +1,42 @@
+@media screen and (max-width: 900px) {
+    .home {
+        &__inner {
+            margin-top: 170px;
+            flex-wrap: nowrap;
+
+            div:nth-of-type(3) {
+                order: -1;
+            }
+        }
+
+        &__title-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        .section__btn-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__avatar-wrapper {
+            justify-content: center;
+        }
+    }
+
+    section:nth-of-type(1) {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .home {
+        &__title {
+            font-size: 50px;
+        }
+    }
+}
