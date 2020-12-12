@@ -1,6 +1,7 @@
 @import "./utils/reset.scss";
 @import "./utils/vars.scss";
 @import "./utils/fonts.scss";
+@import "./utils/mixins.scss";
 
 @import "./components/header/header.scss";
 @import "./components/intro/intro.scss";
@@ -10,9 +11,16 @@
 @import "./components/contact/contact.scss";
 @import "./components/footer/footer.scss";
 
-.app {
-    width: 100%;
+.page-wrap {
+    position: relative;
+    padding-bottom: 200px;
     background-color: #1d1d1d;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 25px;
+    width: 100%;
+    max-width: 1250px;
 }
 
 .markup {
@@ -22,41 +30,33 @@
     font-size: 15px;
     letter-spacing: 1px;
 
-    &--top {
-        top: -200px;
-        left: -60px;
+    &_top {
+        top: 200px;
+        left: -30px;
         padding-left: 25px;
         color: $gray;
 
         &:nth-child(2) {
-            top: -150px;
-            left: -40px;
+            top: 220px;
+            left: -20px;
         }
     }
 
-    &--bot {
-        bottom: 0;
-        left: -40px;
+    &_bot {
+        bottom: 110px;
+        left: -20px;
         padding-left: 25px;
         color: $gray;
 
         &:last-child {
-            bottom: -30px;
-            left: -60px;
+            bottom: 90px;
+            left: -30px;
         }
     }
 }
 
-.container {
-    position: relative;
-    margin: 0 auto;
-    padding: 0 25px;
-    width: 100%;
-    max-width: 1250px;
-}
-
 .section {
-    padding: 100px 150px 100px 150px;
+    padding: 100px 150px 100px 50px;
 
     &__title {
         margin-bottom: 100px;
@@ -67,31 +67,7 @@
         text-shadow: 8px 8px 24px rgba(255, 0, 0, 0.55);
         letter-spacing: 10px;
 
-        &::before {
-            content: "<h2>";
-            display: block;
-            position: absolute;
-            top: -15px;
-            left: -20px;
-            font-family: "Montserrat SemiBold", sans-serif;
-            font-size: 15px;
-            color: $gray;
-            letter-spacing: 1px;
-            text-shadow: none;
-        }
-
-        &::after {
-            content: "</h2>";
-            display: block;
-            position: absolute;
-            left: -20px;
-            bottom: -25px;
-            font-family: "Montserrat SemiBold", sans-serif;
-            font-size: 15px;
-            color: $gray;
-            letter-spacing: 1px;
-            text-shadow: none;
-        }
+        @include markup-section-title;
     }
 
     &__text {
@@ -104,29 +80,50 @@
         line-height: 1.6;
 
         &::before {
+            @include markup-top;
             content: "<p>";
-            display: block;
-            position: absolute;
+
             top: -25px;
-            left: -20px;
-            font-family: "Montserrat SemiBold", sans-serif;
-            font-size: 15px;
-            color: $gray;
-            letter-spacing: 1px;
-            text-shadow: none;
         }
 
         &::after {
+            @include markup-bot;
             content: "</p>";
-            display: block;
-            position: absolute;
-            left: -20px;
             bottom: -25px;
-            font-family: "Montserrat SemiBold", sans-serif;
-            font-size: 15px;
-            color: $gray;
-            letter-spacing: 1px;
-            text-shadow: none;
         }
+    }
+}
+
+.section__btn-wrapper {
+    position: relative;
+    margin-top: 70px;
+
+    .section__btn {
+        padding: 15px 30px;
+        border: 2px solid $red;
+        background: transparent;
+        font-family: "Montserrat Bold", sans-serif;
+        font-size: 25px;
+        color: $red;
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            background: $red;
+            color: #181818;
+            box-shadow: 0px 0px 14px 14px rgba(237, 85, 101, 0.86);
+        }
+    }
+
+    &::before {
+        @include markup-bot;
+        content: "<button>";
+        top: -50px;
+    }
+
+    &::after {
+        @include markup-bot;
+        content: "</button>";
+        bottom: -50px;
     }
 }

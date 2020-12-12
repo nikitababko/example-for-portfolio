@@ -1,14 +1,14 @@
-module.exports = function(gulp, plugins) {
-    return async function() {
+module.exports = function (gulp, plugins) {
+    return async function () {
         gulp.src("./src/*.html")
             .pipe(plugins.sourcemaps.init())
             .pipe(
                 plugins.htmlmin({
                     collapseWhitespace: true,
-                    removeComments: true // удаляем все комментарии
+                    removeComments: true, // удаляем все комментарии
                 })
             )
             .pipe(plugins.sourcemaps.write("./"))
-            .pipe(gulp.dest("./dist/"));
+            .pipe(gulp.dest("./build/"));
     };
 };

@@ -1,26 +1,29 @@
-.header {
+.header-wrapper {
+    background: #181818;
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    padding: 25px 0;
-    background: #181818;
+    z-index: 10;
+    padding: 25px;
+}
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 1250px;
 }
 
 .logo {
-    a {
-        font-family: "Montserrat Bold";
-        font-weight: bold;
-        font-size: 50px;
-        color: $gray;
-        text-decoration: none;
-    }
+    font-family: "Montserrat Bold";
+    font-weight: bold;
+    font-size: 50px;
+    color: $gray;
+    text-decoration: none;
 }
 
 .nav {

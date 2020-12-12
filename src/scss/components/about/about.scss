@@ -19,26 +19,14 @@
     }
 
     &::before {
+        @include markup-bot;
         content: "<span>";
-        display: block;
-        position: absolute;
         top: -25px;
-        left: -20px;
-        font-size: 15px;
-        color: $gray;
-        letter-spacing: 1px;
-        text-shadow: none;
     }
 
     &::after {
+        @include markup-bot;
         content: "</span>";
-        display: block;
-        position: absolute;
-        left: -20px;
         bottom: -25px;
-        font-size: 15px;
-        color: $gray;
-        letter-spacing: 1px;
-        text-shadow: none;
     }
 }

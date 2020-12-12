@@ -1,3 +1,8 @@
+.section_contacts {
+    position: relative;
+    margin-top: 100px;
+}
+
 .form {
     position: relative;
     display: flex;
@@ -61,54 +66,37 @@
         }
     }
 
-    &__button {
+    .section__btn-wrapper {
         display: flex;
         justify-content: flex-end;
         margin: 40px 20px 0 0;
         width: 100%;
 
-        button {
-            padding: 15px 25px;
-            font-family: "Montserrat Bold", sans-serif;
-            font-size: 30px;
-            color: $red;
+        .section__btn {
             text-transform: uppercase;
-            background: transparent;
-            border: 1px solid $red;
-            border-radius: 5px;
-            transition: all 0.4s ease-in-out;
+        }
 
-            &:hover {
-                background: $red;
-                color: #000;
-            }
+        &::before {
+            top: -30px;
+            left: 470px;
+        }
+
+        &::after {
+            bottom: -30px;
+            left: 470px;
         }
     }
 
     &::before {
+        @include markup-top;
         content: "<form>";
-        display: block;
-        position: absolute;
         top: -25px;
-        left: -20px;
-        font-family: "Montserrat SemiBold", sans-serif;
-        font-size: 15px;
-        color: $gray;
-        letter-spacing: 1px;
-        text-shadow: none;
     }
 
     &::after {
+        @include markup-bot;
         content: "</form>";
-        display: block;
-        position: absolute;
-        left: -20px;
         bottom: -25px;
-        font-family: "Montserrat SemiBold", sans-serif;
-        font-size: 15px;
-        color: $gray;
-        letter-spacing: 1px;
-        text-shadow: none;
     }
 }
 

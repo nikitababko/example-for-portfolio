@@ -37,31 +37,17 @@
     }
 
     &::before {
-        content: "<ul>\A<li>";
+        @include markup-top;
+        content: "<ul>\A   <li>";
         white-space: pre;
-        display: block;
-        position: absolute;
         top: -25px;
-        left: -20px;
-        font-family: "Montserrat SemiBold", sans-serif;
-        font-size: 15px;
-        color: $gray;
-        letter-spacing: 1px;
-        text-shadow: none;
     }
 
     &::after {
-        content: "<li>\A<ul>";
+        @include markup-bot;
+        content: "   <li>\A<ul>";
         white-space: pre;
-        display: block;
-        position: absolute;
-        left: -20px;
         bottom: -25px;
-        font-family: "Montserrat SemiBold", sans-serif;
-        font-size: 15px;
-        color: $gray;
-        letter-spacing: 1px;
-        text-shadow: none;
     }
 }
 
@@ -91,28 +77,14 @@
     }
 
     &::before {
+        @include markup-top;
         content: "<span>";
-        display: block;
-        position: absolute;
         top: -25px;
-        left: -20px;
-        font-family: "Montserrat SemiBold", sans-serif;
-        font-size: 15px;
-        color: $gray;
-        letter-spacing: 1px;
-        text-shadow: none;
     }
 
     &::after {
+        @include markup-bot;
         content: "</span>";
-        display: block;
-        position: absolute;
-        left: -20px;
         bottom: -25px;
-        font-family: "Montserrat SemiBold", sans-serif;
-        font-size: 15px;
-        color: $gray;
-        letter-spacing: 1px;
-        text-shadow: none;
     }
 }

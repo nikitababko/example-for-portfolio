@@ -427,25 +427,30 @@ textarea {
   font-style: normal;
   font-display: swap; }
 
-.header {
+.header-wrapper {
+  background: #181818;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
-  padding: 25px 0;
-  background: #181818; }
-  .header .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+  z-index: 10;
+  padding: 25px; }
 
-.logo a {
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1250px; }
+
+.logo {
   font-family: "Montserrat Bold";
   font-weight: bold;
   font-size: 50px;
@@ -474,6 +479,7 @@ textarea {
         color: #ed5565; }
 
 .intro {
+  position: relative;
   height: 100vh; }
   .intro__inner {
     display: -webkit-box;
@@ -506,6 +512,7 @@ textarea {
       position: absolute;
       top: 0;
       left: -20px;
+      font-family: "Montserrat SemiBold", sans-serif;
       font-size: 15px;
       color: #7d7b7b; }
     .intro__title::after {
@@ -514,6 +521,7 @@ textarea {
       position: absolute;
       left: -20px;
       bottom: 0;
+      font-family: "Montserrat SemiBold", sans-serif;
       font-size: 15px;
       color: #7d7b7b; }
   .intro__btn {
@@ -534,24 +542,6 @@ textarea {
         color: #181818;
         -webkit-box-shadow: 0px 0px 14px 14px rgba(237, 85, 101, 0.86);
                 box-shadow: 0px 0px 14px 14px rgba(237, 85, 101, 0.86); }
-    .intro__btn::before {
-      content: "<button>";
-      display: block;
-      position: absolute;
-      top: -50px;
-      left: -20px;
-      font-family: "Montserrat SemiBold", sans-serif;
-      font-size: 15px;
-      color: #7d7b7b; }
-    .intro__btn::after {
-      content: "</button>";
-      display: block;
-      position: absolute;
-      left: -20px;
-      bottom: -50px;
-      font-family: "Montserrat SemiBold", sans-serif;
-      font-size: 15px;
-      color: #7d7b7b; }
   .intro__avatar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -559,54 +549,6 @@ textarea {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start; }
-  .intro__arrow-down {
-    position: absolute;
-    right: 0;
-    bottom: -290px;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-animation: arrow-down 4s ease-in-out infinite;
-            animation: arrow-down 4s ease-in-out infinite; }
-    .intro__arrow-down button {
-      background: transparent;
-      border: none; }
-      .intro__arrow-down button img {
-        border-radius: 50%;
-        -webkit-animation: arrow-down-img 4s ease-in-out infinite;
-                animation: arrow-down-img 4s ease-in-out infinite;
-        width: 70px;
-        height: 70px; }
-
-@-webkit-keyframes arrow-down {
-  0% {
-    bottom: -290px; }
-  50% {
-    bottom: -350px; }
-  100% {
-    bottom: -290px; } }
-
-@keyframes arrow-down {
-  0% {
-    bottom: -290px; }
-  50% {
-    bottom: -350px; }
-  100% {
-    bottom: -290px; } }
-
-@-webkit-keyframes arrow-down-img {
-  50% {
-    -webkit-box-shadow: 0px 0px 14px 14px rgba(255, 255, 255, 0.86);
-            box-shadow: 0px 0px 14px 14px rgba(255, 255, 255, 0.86); } }
-
-@keyframes arrow-down-img {
-  50% {
-    -webkit-box-shadow: 0px 0px 14px 14px rgba(255, 255, 255, 0.86);
-            box-shadow: 0px 0px 14px 14px rgba(255, 255, 255, 0.86); } }
 
 .about__additions {
   position: relative;
@@ -622,25 +564,27 @@ textarea {
     .about__additions span:last-child {
       margin-bottom: 0; }
   .about__additions::before {
+    content: "</h1>";
+    display: block;
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 15px;
+    color: #7d7b7b;
     content: "<span>";
-    display: block;
-    position: absolute;
-    top: -25px;
-    left: -20px;
-    font-size: 15px;
-    color: #7d7b7b;
-    letter-spacing: 1px;
-    text-shadow: none; }
+    top: -25px; }
   .about__additions::after {
-    content: "</span>";
+    content: "</h1>";
     display: block;
     position: absolute;
     left: -20px;
-    bottom: -25px;
+    bottom: 0;
+    font-family: "Montserrat SemiBold", sans-serif;
     font-size: 15px;
     color: #7d7b7b;
-    letter-spacing: 1px;
-    text-shadow: none; }
+    content: "</span>";
+    bottom: -25px; }
 
 .skills__additions {
   position: relative;
@@ -673,29 +617,29 @@ textarea {
     .skills__additions ul li:last-child {
       margin-bottom: 0; }
   .skills__additions::before {
-    content: "<ul>\A<li>";
-    white-space: pre;
+    content: "<h1>";
     display: block;
     position: absolute;
-    top: -25px;
+    top: 0;
     left: -20px;
     font-family: "Montserrat SemiBold", sans-serif;
     font-size: 15px;
     color: #7d7b7b;
-    letter-spacing: 1px;
-    text-shadow: none; }
+    content: "<ul>\A   <li>";
+    white-space: pre;
+    top: -25px; }
   .skills__additions::after {
-    content: "<li>\A<ul>";
-    white-space: pre;
+    content: "</h1>";
     display: block;
     position: absolute;
     left: -20px;
-    bottom: -25px;
+    bottom: 0;
     font-family: "Montserrat SemiBold", sans-serif;
     font-size: 15px;
     color: #7d7b7b;
-    letter-spacing: 1px;
-    text-shadow: none; }
+    content: "   <li>\A<ul>";
+    white-space: pre;
+    bottom: -25px; }
 
 .skills__contact-me {
   position: relative;
@@ -718,53 +662,30 @@ textarea {
       height: 2px;
       background: #ed5565; }
   .skills__contact-me::before {
+    content: "<h1>";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 15px;
+    color: #7d7b7b;
     content: "<span>";
-    display: block;
-    position: absolute;
-    top: -25px;
-    left: -20px;
-    font-family: "Montserrat SemiBold", sans-serif;
-    font-size: 15px;
-    color: #7d7b7b;
-    letter-spacing: 1px;
-    text-shadow: none; }
+    top: -25px; }
   .skills__contact-me::after {
-    content: "</span>";
+    content: "</h1>";
     display: block;
     position: absolute;
     left: -20px;
-    bottom: -25px;
+    bottom: 0;
     font-family: "Montserrat SemiBold", sans-serif;
     font-size: 15px;
     color: #7d7b7b;
-    letter-spacing: 1px;
-    text-shadow: none; }
-
-.projects {
-  position: relative; }
-
-.projects__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 700px;
-  margin: 0 auto; }
-  .projects__buttons button {
-    width: 186px;
-    height: 49px;
-    border: 1px solid #ed5565;
-    border-radius: 5px;
-    color: #fff;
-    background: transparent;
-    -webkit-transition: background 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out; }
-    .projects__buttons button:hover {
-      background: #ed5565; }
+    content: "</span>";
+    bottom: -25px; }
 
 .projects__content {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -831,28 +752,38 @@ textarea {
     transition: all 0.5s ease-in-out; }
     .projects__content-link:hover {
       background: #ed5565; }
+  .projects__content .section__btn-wrapper {
+    position: absolute;
+    bottom: -50px;
+    left: 54%;
+    -webkit-transform: translate(-50%, 200%);
+            transform: translate(-50%, 200%); }
   .projects__content::before {
+    content: "<h1>";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 15px;
+    color: #7d7b7b;
     content: "<div>";
-    display: block;
-    position: absolute;
-    top: 260px;
-    left: -20px;
-    font-family: "Montserrat SemiBold", sans-serif;
-    font-size: 15px;
-    color: #7d7b7b;
-    letter-spacing: 1px;
-    text-shadow: none; }
+    top: -25px; }
   .projects__content::after {
-    content: "</div>";
+    content: "</h1>";
     display: block;
     position: absolute;
     left: -20px;
-    bottom: -25px;
+    bottom: 0;
     font-family: "Montserrat SemiBold", sans-serif;
     font-size: 15px;
     color: #7d7b7b;
-    letter-spacing: 1px;
-    text-shadow: none; }
+    content: "</div>";
+    bottom: -25px; }
+
+.section_contacts {
+  position: relative;
+  margin-top: 100px; }
 
 .form {
   position: relative;
@@ -900,7 +831,7 @@ textarea {
       transition: all 0.5s ease-in-out; }
       .form__message textarea:focus {
         border: 1px solid #ed5565; }
-  .form__button {
+  .form .section__btn-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -909,42 +840,36 @@ textarea {
             justify-content: flex-end;
     margin: 40px 20px 0 0;
     width: 100%; }
-    .form__button button {
-      padding: 15px 25px;
-      font-family: "Montserrat Bold", sans-serif;
-      font-size: 30px;
-      color: #ed5565;
-      text-transform: uppercase;
-      background: transparent;
-      border: 1px solid #ed5565;
-      border-radius: 5px;
-      -webkit-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out; }
-      .form__button button:hover {
-        background: #ed5565;
-        color: #000; }
+    .form .section__btn-wrapper .section__btn {
+      text-transform: uppercase; }
+    .form .section__btn-wrapper::before {
+      top: -30px;
+      left: 470px; }
+    .form .section__btn-wrapper::after {
+      bottom: -30px;
+      left: 470px; }
   .form::before {
+    content: "<h1>";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 15px;
+    color: #7d7b7b;
     content: "<form>";
-    display: block;
-    position: absolute;
-    top: -25px;
-    left: -20px;
-    font-family: "Montserrat SemiBold", sans-serif;
-    font-size: 15px;
-    color: #7d7b7b;
-    letter-spacing: 1px;
-    text-shadow: none; }
+    top: -25px; }
   .form::after {
-    content: "</form>";
+    content: "</h1>";
     display: block;
     position: absolute;
     left: -20px;
-    bottom: -25px;
+    bottom: 0;
     font-family: "Montserrat SemiBold", sans-serif;
     font-size: 15px;
     color: #7d7b7b;
-    letter-spacing: 1px;
-    text-shadow: none; }
+    content: "</form>";
+    bottom: -25px; }
 
 #status {
   width: 90%;
@@ -991,7 +916,12 @@ textarea {
     pointer-events: none; } }
 
 .footer {
-  background: #181818; }
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #181818;
+  width: 100%; }
   .footer__content {
     padding: 50px 0;
     text-align: center; }
@@ -1019,9 +949,16 @@ textarea {
       background: #ff6711;
       color: #181818; }
 
-.app {
-  width: 100%;
+.page-wrap {
+  position: relative;
+  padding-bottom: 200px;
   background-color: #1d1d1d; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 25px;
+  width: 100%;
+  max-width: 1250px; }
 
 .markup {
   position: absolute;
@@ -1029,32 +966,25 @@ textarea {
   color: #fff;
   font-size: 15px;
   letter-spacing: 1px; }
-  .markup--top {
-    top: -200px;
-    left: -60px;
+  .markup_top {
+    top: 200px;
+    left: -30px;
     padding-left: 25px;
     color: #7d7b7b; }
-    .markup--top:nth-child(2) {
-      top: -150px;
-      left: -40px; }
-  .markup--bot {
-    bottom: 0;
-    left: -40px;
+    .markup_top:nth-child(2) {
+      top: 220px;
+      left: -20px; }
+  .markup_bot {
+    bottom: 110px;
+    left: -20px;
     padding-left: 25px;
     color: #7d7b7b; }
-    .markup--bot:last-child {
-      bottom: -30px;
-      left: -60px; }
-
-.container {
-  position: relative;
-  margin: 0 auto;
-  padding: 0 25px;
-  width: 100%;
-  max-width: 1250px; }
+    .markup_bot:last-child {
+      bottom: 90px;
+      left: -30px; }
 
 .section {
-  padding: 100px 150px 100px 150px; }
+  padding: 100px 150px 100px 50px; }
   .section__title {
     margin-bottom: 100px;
     position: relative;
@@ -1094,26 +1024,67 @@ textarea {
     color: #fff;
     line-height: 1.6; }
     .section__text::before {
+      content: "<h1>";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -20px;
+      font-family: "Montserrat SemiBold", sans-serif;
+      font-size: 15px;
+      color: #7d7b7b;
       content: "<p>";
-      display: block;
-      position: absolute;
-      top: -25px;
-      left: -20px;
-      font-family: "Montserrat SemiBold", sans-serif;
-      font-size: 15px;
-      color: #7d7b7b;
-      letter-spacing: 1px;
-      text-shadow: none; }
+      top: -25px; }
     .section__text::after {
-      content: "</p>";
+      content: "</h1>";
       display: block;
       position: absolute;
       left: -20px;
-      bottom: -25px;
+      bottom: 0;
       font-family: "Montserrat SemiBold", sans-serif;
       font-size: 15px;
       color: #7d7b7b;
-      letter-spacing: 1px;
-      text-shadow: none; }
+      content: "</p>";
+      bottom: -25px; }
+
+.section__btn-wrapper {
+  position: relative;
+  margin-top: 70px; }
+  .section__btn-wrapper .section__btn {
+    padding: 15px 30px;
+    border: 2px solid #ed5565;
+    background: transparent;
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 25px;
+    color: #ed5565;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .section__btn-wrapper .section__btn:hover {
+      background: #ed5565;
+      color: #181818;
+      -webkit-box-shadow: 0px 0px 14px 14px rgba(237, 85, 101, 0.86);
+              box-shadow: 0px 0px 14px 14px rgba(237, 85, 101, 0.86); }
+  .section__btn-wrapper::before {
+    content: "</h1>";
+    display: block;
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 15px;
+    color: #7d7b7b;
+    content: "<button>";
+    top: -50px; }
+  .section__btn-wrapper::after {
+    content: "</h1>";
+    display: block;
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 15px;
+    color: #7d7b7b;
+    content: "</button>";
+    bottom: -50px; }
 
 /*# sourceMappingURL=index.css.map */

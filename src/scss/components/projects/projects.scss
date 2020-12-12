@@ -1,29 +1,9 @@
-.projects {
-    position: relative;
-}
-
-.projects__buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 700px;
-    margin: 0 auto;
-
-    button {
-        width: 186px;
-        height: 49px;
-        border: 1px solid $red;
-        border-radius: 5px;
-        color: #fff;
-        background: transparent;
-        transition: background 0.5s ease-in-out;
-
-        &:hover {
-            background: $red;
-        }
-    }
-}
+// .projects {
+//     $projects: &;
+// }
 
 .projects__content {
+    position: relative;
     display: flex;
     margin-top: 70px;
     $self: &;
@@ -117,29 +97,22 @@
         }
     }
 
-    &::before {
-        content: "<div>";
-        display: block;
+    .section__btn-wrapper {
         position: absolute;
-        top: 260px;
-        left: -20px;
-        font-family: "Montserrat SemiBold", sans-serif;
-        font-size: 15px;
-        color: $gray;
-        letter-spacing: 1px;
-        text-shadow: none;
+        bottom: -50px;
+        left: 54%;
+        transform: translate(-50%, 200%);
+    }
+
+    &::before {
+        @include markup-top;
+        content: "<div>";
+        top: -25px;
     }
 
     &::after {
+        @include markup-bot;
         content: "</div>";
-        display: block;
-        position: absolute;
-        left: -20px;
         bottom: -25px;
-        font-family: "Montserrat SemiBold", sans-serif;
-        font-size: 15px;
-        color: $gray;
-        letter-spacing: 1px;
-        text-shadow: none;
     }
 }

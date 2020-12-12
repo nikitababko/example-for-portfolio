@@ -6,7 +6,7 @@
         <title>Babko</title>
         <link rel="icon" type="image/png" href="./img/app/favicon.png" />
         <link rel="stylesheet" href="./css/index.css" />
-        <script defer src="./js/index.js"></script>
+        <script defer src="./js/form.js"></script>
         <script
             crossorigin="anonymous"
             defer
@@ -14,50 +14,44 @@
         ></script>
     </head>
     <body>
-        <div class="app">
-            <!-- header -->
-            <header class="header">
-                <div class="container">
-                    <div class="logo"><a href="#">Nikita</a></div>
-                    <nav class="nav">
-                        <ul>
-                            <li><a href="#">About me</a></li>
-                            <li><a href="#">Skills</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact me</a></li>
-                        </ul>
-                    </nav>
+        <div class="page-wrap">
+            <div class="container">
+                <!-- header -->
+                <div class="header-wrapper">
+                    <header class="header">
+                        <div class="logo-wrapper">
+                            <a class="logo" href="#">Nikita</a>
+                        </div>
+                        <nav class="nav">
+                            <ul>
+                                <li><a href="#">About me</a></li>
+                                <li><a href="#">Skills</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Contact me</a></li>
+                            </ul>
+                        </nav>
+                    </header>
                 </div>
-            </header>
 
-            <!-- intro -->
-            <section class="intro section">
-                <div class="container">
+                <!-- intro -->
+                <section class="intro section">
                     <div class="intro__inner">
-                        <span class="markup markup--top">&lt;html&gt;</span>
-                        <span class="markup markup--top">&lt;body&gt;</span>
+                        <span class="markup markup_top">&lt;html&gt;</span>
+                        <span class="markup markup_top">&lt;body&gt;</span>
                         <h1 class="intro__title">
                             Hi, I'm <span>Nikita</span><br />Web developer
                         </h1>
-                        <div class="intro__btn">
-                            <a href="#">Contact me</a>
+                        <div class="section__btn-wrapper">
+                            <a class="section__btn" href="#">Contact me</a>
                         </div>
                         <div class="intro__avatar">
                             <img src="./img/intro/avatar.png" alt="avatar" />
                         </div>
                     </div>
+                </section>
 
-                    <div class="intro__arrow-down">
-                        <button>
-                            <img src="./img/intro/arrow-down.svg" alt="arrow-down" />
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- about -->
-            <section class="section">
-                <div class="container">
+                <!-- about -->
+                <section class="section">
                     <div class="about">
                         <h2 class="section__title">About me</h2>
                         <p class="section__text">
@@ -82,12 +76,10 @@
                             <span>Degree: Bachelor</span>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- skills -->
-            <section class="section">
-                <div class="container">
+                <!-- skills -->
+                <section class="section">
                     <div class="skills">
                         <h2 class="section__title">Skills & Experience</h2>
                         <p class="section__text">
@@ -138,19 +130,13 @@
                             for more details or just <a href="#">contact me</a>.</span
                         >
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- projects -->
-            <section class="section">
-                <div class="container">
+                <!-- projects -->
+                <section class="section section_projects">
                     <div class="projects">
                         <h2 class="section__title">Projects</h2>
-                        <div class="projects__buttons">
-                            <button>All</button>
-                            <button>React/Node</button>
-                            <button>Landing</button>
-                        </div>
+
                         <div class="projects__content">
                             <div class="projects__content-item">
                                 <div class="projects__content-background">
@@ -224,31 +210,21 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- <a
-                                href="https://github.com/nikitababko/tic-tac-toe"
-                                target="_blank"
-                                rel="nofollow noopener"
-                            >
-                                <img
-                                    src="./img/projects/tic-tac-toe.png"
-                                    alt="tic-tac-toe.png"
-                                />
-                            </a>
-                            <a
-                                href="https://github.com/nikitababko/landing-page___golden-page___-LIGHT-"
-                                target="_blank"
-                                rel="nofollow noopener"
-                                ><img src="./img/projects/landing.png" alt="landing.png"
-                            /></a> -->
+                            <div class="section__btn-wrapper">
+                                <a
+                                    class="section__btn"
+                                    href="https://github.com/nikitababko"
+                                    target="_blank"
+                                    rel="nofollow noopener"
+                                    >Learn more</a
+                                >
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- contact -->
-            <section class="section">
-                <div class="container">
+                <!-- contact -->
+                <section class="section section_contacts">
                     <div class="contact">
                         <h2 class="section__title">Contact me</h2>
                         <form
@@ -298,20 +274,18 @@
                                     rows="10"
                                 ></textarea>
                             </div>
-                            <div class="form__button">
-                                <button type="submit">Submit</button>
+                            <div class="section__btn-wrapper">
+                                <button class="section__btn" type="submit">Submit</button>
                             </div>
                         </form>
                         <div id="status"></div>
-                        <span class="markup markup--bot">&lt;/body&gt;</span>
-                        <span class="markup markup--bot">&lt;/html&gt;</span>
+                        <span class="markup markup_bot">&lt;/body&gt;</span>
+                        <span class="markup markup_bot">&lt;/html&gt;</span>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- footer -->
-            <footer class="footer">
-                <div class="container">
+                <!-- footer -->
+                <footer class="footer">
                     <div class="footer__content">
                         <div class="social">
                             <a
@@ -389,8 +363,8 @@
                         </div>
                         <span class="footer__content-name">Nikita Babko ©2019</span>
                     </div>
-                </div>
-            </footer>
+                </footer>
+            </div>
         </div>
     </body>
 </html>
