@@ -1,0 +1,145 @@
+.projects {
+    position: relative;
+}
+
+.projects__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: 0 auto;
+
+    button {
+        width: 186px;
+        height: 49px;
+        border: 1px solid $red;
+        border-radius: 5px;
+        color: #fff;
+        background: transparent;
+        transition: background 0.5s ease-in-out;
+
+        &:hover {
+            background: $red;
+        }
+    }
+}
+
+.projects__content {
+    display: flex;
+    margin-top: 70px;
+    $self: &;
+
+    &-item {
+        position: relative;
+        margin: 0 20px;
+        text-align: center;
+
+        #{$self}-background {
+            img {
+                width: 320px;
+                height: 425px;
+                transition: opacity 0.5s ease-in-out;
+            }
+        }
+
+        &:hover {
+            #{$self}-background {
+                img {
+                    opacity: 0;
+                }
+            }
+
+            #{$self}-name,
+            #{$self}-tech {
+                top: 30%;
+                opacity: 1;
+            }
+
+            #{$self}-link {
+                bottom: 38%;
+                opacity: 1;
+            }
+        }
+    }
+
+    &-background {
+        background: #181818;
+        width: 320px;
+        height: 425px;
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+
+        font-family: "Montserrat SemiBold", sans-serif;
+        color: #fff;
+
+        span:nth-child(2) {
+            margin: 40px 0;
+        }
+
+        a {
+            text-decoration: none;
+
+            font-family: "Montserrat SemiBold", sans-serif;
+            color: #fff;
+        }
+    }
+
+    &-name {
+        color: $red;
+    }
+
+    &-name,
+    &-tech {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &-link {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 10px 0;
+        width: 50%;
+        margin: 0 auto;
+        border: 1px solid $red;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            background: $red;
+        }
+    }
+
+    &::before {
+        content: "<div>";
+        display: block;
+        position: absolute;
+        top: 260px;
+        left: -20px;
+        font-family: "Montserrat SemiBold", sans-serif;
+        font-size: 15px;
+        color: $gray;
+        letter-spacing: 1px;
+        text-shadow: none;
+    }
+
+    &::after {
+        content: "</div>";
+        display: block;
+        position: absolute;
+        left: -20px;
+        bottom: -25px;
+        font-family: "Montserrat SemiBold", sans-serif;
+        font-size: 15px;
+        color: $gray;
+        letter-spacing: 1px;
+        text-shadow: none;
+    }
+}

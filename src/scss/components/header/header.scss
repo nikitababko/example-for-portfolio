@@ -1,0 +1,55 @@
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 25px 0;
+    background: #181818;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+    a {
+        font-family: "Montserrat Bold";
+        font-weight: bold;
+        font-size: 50px;
+        color: $gray;
+        text-decoration: none;
+    }
+}
+
+.nav {
+    ul {
+        display: flex;
+
+        li {
+            margin: 0 20px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                font-family: "Montserrat Regular", sans-serif;
+                font-size: 30px;
+                color: $gray;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: color 0.4s ease-in-out;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+}

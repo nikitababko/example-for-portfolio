@@ -1,0 +1,132 @@
+@import "./utils/reset.scss";
+@import "./utils/vars.scss";
+@import "./utils/fonts.scss";
+
+@import "./components/header/header.scss";
+@import "./components/intro/intro.scss";
+@import "./components/about/about.scss";
+@import "./components/skills/skills.scss";
+@import "./components/projects/projects.scss";
+@import "./components/contact/contact.scss";
+@import "./components/footer/footer.scss";
+
+.app {
+    width: 100%;
+    background-color: #1d1d1d;
+}
+
+.markup {
+    position: absolute;
+    font-family: "Montserrat SemiBold", sans-serif;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    &--top {
+        top: -200px;
+        left: -60px;
+        padding-left: 25px;
+        color: $gray;
+
+        &:nth-child(2) {
+            top: -150px;
+            left: -40px;
+        }
+    }
+
+    &--bot {
+        bottom: 0;
+        left: -40px;
+        padding-left: 25px;
+        color: $gray;
+
+        &:last-child {
+            bottom: -30px;
+            left: -60px;
+        }
+    }
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 25px;
+    width: 100%;
+    max-width: 1250px;
+}
+
+.section {
+    padding: 100px 150px 100px 150px;
+
+    &__title {
+        margin-bottom: 100px;
+        position: relative;
+        font-family: "Montserrat Bold", sans-serif;
+        font-size: 70px;
+        color: $red;
+        text-shadow: 8px 8px 24px rgba(255, 0, 0, 0.55);
+        letter-spacing: 10px;
+
+        &::before {
+            content: "<h2>";
+            display: block;
+            position: absolute;
+            top: -15px;
+            left: -20px;
+            font-family: "Montserrat SemiBold", sans-serif;
+            font-size: 15px;
+            color: $gray;
+            letter-spacing: 1px;
+            text-shadow: none;
+        }
+
+        &::after {
+            content: "</h2>";
+            display: block;
+            position: absolute;
+            left: -20px;
+            bottom: -25px;
+            font-family: "Montserrat SemiBold", sans-serif;
+            font-size: 15px;
+            color: $gray;
+            letter-spacing: 1px;
+            text-shadow: none;
+        }
+    }
+
+    &__text {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        font-family: "Montserrat SemiBold", sans-serif;
+        font-size: 20px;
+        color: #fff;
+        line-height: 1.6;
+
+        &::before {
+            content: "<p>";
+            display: block;
+            position: absolute;
+            top: -25px;
+            left: -20px;
+            font-family: "Montserrat SemiBold", sans-serif;
+            font-size: 15px;
+            color: $gray;
+            letter-spacing: 1px;
+            text-shadow: none;
+        }
+
+        &::after {
+            content: "</p>";
+            display: block;
+            position: absolute;
+            left: -20px;
+            bottom: -25px;
+            font-family: "Montserrat SemiBold", sans-serif;
+            font-size: 15px;
+            color: $gray;
+            letter-spacing: 1px;
+            text-shadow: none;
+        }
+    }
+}

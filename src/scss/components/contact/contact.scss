@@ -1,0 +1,148 @@
+.form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    &__first-name,
+    &__last-name,
+    &__email,
+    &__subject {
+        input {
+            padding: 25px 0 25px 25px;
+            font-family: "Montserrat SemiBold", sans-serif;
+            font-size: 20px;
+            color: $gray;
+            background: #2b2b2b;
+            border: none;
+            transition: all 0.5s ease-in-out;
+
+            &:focus {
+                border: 1px solid $red;
+            }
+        }
+    }
+
+    &__first-name,
+    &__last-name {
+        input {
+            width: 340px;
+        }
+    }
+
+    &__subject,
+    &__email {
+        margin-top: 40px;
+        width: 100%;
+        input {
+            width: 100%;
+        }
+    }
+
+    &__message {
+        margin-top: 40px;
+        width: 100%;
+        textarea {
+            padding: 25px 0 25px 25px;
+            width: 100%;
+            font-family: "Montserrat SemiBold", sans-serif;
+            font-size: 20px;
+            color: $gray;
+            background: #2b2b2b;
+            border: none;
+            resize: none;
+            transition: all 0.5s ease-in-out;
+
+            &:focus {
+                border: 1px solid $red;
+            }
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: flex-end;
+        margin: 40px 20px 0 0;
+        width: 100%;
+
+        button {
+            padding: 15px 25px;
+            font-family: "Montserrat Bold", sans-serif;
+            font-size: 30px;
+            color: $red;
+            text-transform: uppercase;
+            background: transparent;
+            border: 1px solid $red;
+            border-radius: 5px;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+                background: $red;
+                color: #000;
+            }
+        }
+    }
+
+    &::before {
+        content: "<form>";
+        display: block;
+        position: absolute;
+        top: -25px;
+        left: -20px;
+        font-family: "Montserrat SemiBold", sans-serif;
+        font-size: 15px;
+        color: $gray;
+        letter-spacing: 1px;
+        text-shadow: none;
+    }
+
+    &::after {
+        content: "</form>";
+        display: block;
+        position: absolute;
+        left: -20px;
+        bottom: -25px;
+        font-family: "Montserrat SemiBold", sans-serif;
+        font-size: 15px;
+        color: $gray;
+        letter-spacing: 1px;
+        text-shadow: none;
+    }
+}
+
+#status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 40px auto;
+    border-radius: 8px;
+}
+#status.success {
+    background-color: #08fdd8;
+    font-size: 20px;
+    color: $gray;
+    animation: status 4s ease forwards;
+}
+#status.error {
+    background-color: $red;
+    font-size: 20px;
+    color: white;
+    animation: status 4s ease forwards;
+}
+@keyframes status {
+    0% {
+        pointer-events: all;
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
