@@ -5,7 +5,8 @@
         position: absolute;
         top: -15px;
         left: -20px;
-        font-family: "Montserrat SemiBold", sans-serif;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
         font-size: 15px;
         color: $gray;
         letter-spacing: 1px;
@@ -18,7 +19,8 @@
         position: absolute;
         left: -20px;
         bottom: -25px;
-        font-family: "Montserrat SemiBold", sans-serif;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
         font-size: 15px;
         color: $gray;
         letter-spacing: 1px;
@@ -32,7 +34,8 @@
     position: absolute;
     top: 0;
     left: -20px;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: $gray;
 }
@@ -43,7 +46,8 @@
     position: absolute;
     left: -20px;
     bottom: 0;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: $gray;
 }

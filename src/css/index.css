@@ -406,27 +406,6 @@ textarea {
   color: #000;
   padding: 0.2em 0; }
 
-@font-face {
-  font-family: "Montserrat Regular";
-  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/montserrat-regular/montserrat.woff2") format("woff2"), url("../fonts/montserrat-regular/montserrat.woff") format("woff"), url("../fonts/montserrat-regular/montserrat.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Montserrat Bold";
-  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/montserrat-bold/montserratbold.woff2") format("woff2"), url("../fonts/montserrat-bold/montserratbold.woff") format("woff"), url("../fonts/montserrat-bold/Montserrat-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Montserrat SemiBold";
-  src: local("Montserrat SemiBold"), local("Montserrat SemiBold"), url("../fonts/montserrat-semibold/Montserrat-SemiBold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; }
-
 .active {
   color: #ed5565 !important; }
 
@@ -457,7 +436,8 @@ textarea {
   max-width: 1250px; }
 
 .logo {
-  font-family: "Montserrat Bold";
+  font-family: "Montserrat";
+  font-weight: 700;
   font-weight: bold;
   font-size: 50px;
   color: #7d7b7b;
@@ -475,6 +455,7 @@ textarea {
       margin-right: 0; }
     .nav ul li a {
       font-family: "Montserrat Regular", sans-serif;
+      font-weight: 400;
       font-size: 30px;
       color: #7d7b7b;
       text-decoration: none;
@@ -505,7 +486,8 @@ textarea {
     width: 100%;
     max-width: 500px;
     line-height: 1.6;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     font-size: 70px;
     letter-spacing: 2px;
     color: #fff; }
@@ -518,7 +500,8 @@ textarea {
       position: absolute;
       top: 0;
       left: -20px;
-      font-family: "Montserrat SemiBold", sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
       font-size: 15px;
       color: #7d7b7b; }
     .home__title::after {
@@ -527,27 +510,28 @@ textarea {
       position: absolute;
       left: -20px;
       bottom: 0;
-      font-family: "Montserrat SemiBold", sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
       font-size: 15px;
       color: #7d7b7b; }
-  .home__btn {
+  .home .section__btn {
     position: relative;
-    margin-top: 70px; }
-    .home__btn a {
-      padding: 15px 30px;
-      border: 2px solid #ed5565;
-      background: transparent;
-      font-family: "Montserrat Bold", sans-serif;
-      font-size: 25px;
-      color: #ed5565;
-      text-decoration: none;
-      -webkit-transition: all 0.5s ease-in-out;
-      transition: all 0.5s ease-in-out; }
-      .home__btn a:hover {
-        background: #ed5565;
-        color: #181818;
-        -webkit-box-shadow: 0px 0px 14px 14px rgba(237, 85, 101, 0.86);
-                box-shadow: 0px 0px 14px 14px rgba(237, 85, 101, 0.86); }
+    margin-top: 70px;
+    padding: 15px 30px;
+    border: 2px solid #ed5565;
+    background: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #ed5565;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .home .section__btn:hover {
+      background: #ed5565;
+      color: #181818;
+      -webkit-box-shadow: 0px 0px 14px 14px rgba(237, 85, 101, 0.86);
+              box-shadow: 0px 0px 14px 14px rgba(237, 85, 101, 0.86); }
   .home__avatar-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -562,6 +546,7 @@ textarea {
   .about__additions span {
     margin: 15px auto;
     font-family: "Montserrat Bold", sans-serif;
+    font-weight: 700;
     font-size: 20px;
     color: #fff;
     display: block; }
@@ -575,7 +560,8 @@ textarea {
     position: absolute;
     left: -20px;
     bottom: 0;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "<span>";
@@ -586,7 +572,8 @@ textarea {
     position: absolute;
     left: -20px;
     bottom: 0;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "</span>";
@@ -607,6 +594,7 @@ textarea {
   max-width: 800px;
   margin-top: 70px;
   font-family: "Montserrat Bold", sans-serif;
+  font-weight: 700;
   font-size: 30px;
   color: #fff; }
   .skills__additions div:last-child {
@@ -616,6 +604,7 @@ textarea {
   .skills__additions ul li {
     margin: 20px 0 20px 30px;
     font-family: "Montserrat SemiBold", sans-serif;
+    font-weight: 600;
     font-size: 20px;
     list-style-type: disc; }
     .skills__additions ul li:first-child {
@@ -628,7 +617,8 @@ textarea {
     position: absolute;
     top: 0;
     left: -20px;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "<ul>\A   <li>";
@@ -640,7 +630,8 @@ textarea {
     position: absolute;
     left: -20px;
     bottom: 0;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "   <li>\A<ul>";
@@ -650,6 +641,7 @@ textarea {
 .skills__contact-me {
   position: relative;
   font-family: "Montserrat SemiBold", sans-serif;
+  font-weight: 600;
   font-size: 20px;
   color: #fff; }
   .skills__contact-me a {
@@ -673,7 +665,8 @@ textarea {
     position: absolute;
     top: 0;
     left: -20px;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "<span>";
@@ -684,7 +677,8 @@ textarea {
     position: absolute;
     left: -20px;
     bottom: 0;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "</span>";
@@ -727,12 +721,14 @@ textarea {
         -ms-flex-direction: column;
             flex-direction: column;
     font-family: "Montserrat SemiBold", sans-serif;
+    font-weight: 600;
     color: #fff; }
     .projects__content-info span:nth-child(2) {
       margin: 40px 0; }
     .projects__content-info a {
       text-decoration: none;
       font-family: "Montserrat SemiBold", sans-serif;
+      font-weight: 600;
       color: #fff; }
   .projects__content-name {
     color: #ed5565; }
@@ -770,7 +766,8 @@ textarea {
     position: absolute;
     top: 0;
     left: -20px;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "<div>";
@@ -781,7 +778,8 @@ textarea {
     position: absolute;
     left: -20px;
     bottom: 0;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "</div>";
@@ -806,6 +804,7 @@ textarea {
   .form__first-name input, .form__last-name input, .form__email input, .form__subject input {
     padding: 25px 0 25px 25px;
     font-family: "Montserrat SemiBold", sans-serif;
+    font-weight: 600;
     font-size: 20px;
     color: #7d7b7b;
     background: #2b2b2b;
@@ -828,6 +827,7 @@ textarea {
       padding: 25px 0 25px 25px;
       width: 100%;
       font-family: "Montserrat SemiBold", sans-serif;
+      font-weight: 600;
       font-size: 20px;
       color: #7d7b7b;
       background: #2b2b2b;
@@ -860,7 +860,8 @@ textarea {
     position: absolute;
     top: 0;
     left: -20px;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "<form>";
@@ -871,7 +872,8 @@ textarea {
     position: absolute;
     left: -20px;
     bottom: 0;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "</form>";
@@ -935,6 +937,7 @@ textarea {
       margin-top: 60px;
       display: block;
       font-family: "Montserrat SemiBold", sans-serif;
+      font-weight: 600;
       color: #ed5565;
       text-transform: uppercase; }
 
@@ -1152,7 +1155,8 @@ html {
 
 .markup {
   position: absolute;
-  font-family: "Montserrat SemiBold", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   color: #fff;
   font-size: 15px;
   letter-spacing: 1px; }
@@ -1178,7 +1182,8 @@ html {
   .section__title {
     margin-bottom: 100px;
     position: relative;
-    font-family: "Montserrat Bold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     font-size: 70px;
     color: #ed5565;
     text-shadow: 8px 8px 24px rgba(255, 0, 0, 0.55);
@@ -1189,7 +1194,8 @@ html {
       position: absolute;
       top: -15px;
       left: -20px;
-      font-family: "Montserrat SemiBold", sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
       font-size: 15px;
       color: #7d7b7b;
       letter-spacing: 1px;
@@ -1200,7 +1206,8 @@ html {
       position: absolute;
       left: -20px;
       bottom: -25px;
-      font-family: "Montserrat SemiBold", sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
       font-size: 15px;
       color: #7d7b7b;
       letter-spacing: 1px;
@@ -1209,7 +1216,8 @@ html {
     position: relative;
     width: 100%;
     max-width: 900px;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 20px;
     color: #fff;
     line-height: 1.6; }
@@ -1219,7 +1227,8 @@ html {
       position: absolute;
       top: 0;
       left: -20px;
-      font-family: "Montserrat SemiBold", sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
       font-size: 15px;
       color: #7d7b7b;
       content: "<p>";
@@ -1230,7 +1239,8 @@ html {
       position: absolute;
       left: -20px;
       bottom: 0;
-      font-family: "Montserrat SemiBold", sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
       font-size: 15px;
       color: #7d7b7b;
       content: "</p>";
@@ -1244,6 +1254,7 @@ html {
     border: 2px solid #ed5565;
     background: transparent;
     font-family: "Montserrat Bold", sans-serif;
+    font-weight: 700;
     font-size: 25px;
     color: #ed5565;
     text-decoration: none;
@@ -1260,7 +1271,8 @@ html {
     position: absolute;
     left: -20px;
     bottom: 0;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "<button>";
@@ -1271,7 +1283,8 @@ html {
     position: absolute;
     left: -20px;
     bottom: 0;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     color: #7d7b7b;
     content: "</button>";

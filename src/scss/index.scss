@@ -1,6 +1,6 @@
 @import "./utils/reset.scss";
 @import "./utils/vars.scss";
-@import "./fonts.scss";
+// @import "./fonts.scss";
 @import "./utils/mixins.scss";
 
 @import "./components/header/header.scss";
@@ -37,7 +37,8 @@ html {
 
 .markup {
     position: absolute;
-    font-family: "Montserrat SemiBold", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     color: #fff;
     font-size: 15px;
     letter-spacing: 1px;
@@ -73,7 +74,8 @@ html {
     &__title {
         margin-bottom: 100px;
         position: relative;
-        font-family: "Montserrat Bold", sans-serif;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
         font-size: 70px;
         color: $red;
         text-shadow: 8px 8px 24px rgba(255, 0, 0, 0.55);
@@ -86,7 +88,8 @@ html {
         position: relative;
         width: 100%;
         max-width: 900px;
-        font-family: "Montserrat SemiBold", sans-serif;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
         font-size: 20px;
         color: #fff;
         line-height: 1.6;
@@ -115,6 +118,7 @@ html {
         border: 2px solid $red;
         background: transparent;
         font-family: "Montserrat Bold", sans-serif;
+        font-weight: 700;
         font-size: 25px;
         color: $red;
         text-decoration: none;
