@@ -875,7 +875,7 @@ textarea {
     font-size: 15px;
     color: #7d7b7b;
     content: "</form>";
-    bottom: -25px; }
+    bottom: -75px; }
 
 #status {
   width: 90%;
@@ -1089,13 +1089,51 @@ textarea {
       bottom: -50px;
       left: 50%; } }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
   .form {
-    width: 500px; }
-    .form__first-name input, .form__last-name input, .form__email input, .form__subject input {
-      width: 340px; }
-    .form__message textarea {
-      width: 340px; } }
+    width: 500px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    .form__first-name, .form__last-name, .form__email, .form__subject {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .form__first-name input, .form__last-name input, .form__email input, .form__subject input {
+        width: 340px; }
+    .form__message {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .form__message textarea {
+        width: 340px; }
+    .form__last-name {
+      margin-top: 40px; }
+    .form .section__btn-wrapper {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .form .section__btn-wrapper::before {
+        left: 120px; }
+      .form .section__btn-wrapper::after {
+        left: 120px; } }
+
+@media screen and (max-width: 950px) {
+  .social {
+    width: 50%; }
+    .social__link {
+      display: block;
+      margin: 10px auto;
+      width: 10%; } }
 
 html {
   scroll-behavior: smooth; }

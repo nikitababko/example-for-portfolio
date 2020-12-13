@@ -1,19 +1,41 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
     .form {
         width: 500px;
+        flex-direction: column;
+        flex-wrap: nowrap;
 
         &__first-name,
         &__last-name,
         &__email,
         &__subject {
+            display: flex;
+            justify-content: center;
             input {
                 width: 340px;
             }
         }
 
         &__message {
+            display: flex;
+            justify-content: center;
             textarea {
                 width: 340px;
+            }
+        }
+
+        &__last-name {
+            margin-top: 40px;
+        }
+
+        .section__btn-wrapper {
+            justify-content: center;
+
+            &::before {
+                left: 120px;
+            }
+
+            &::after {
+                left: 120px;
             }
         }
     }

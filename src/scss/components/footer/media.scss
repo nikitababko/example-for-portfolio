@@ -1,0 +1,11 @@
+@media screen and (max-width: 950px) {
+    .social {
+        width: 50%;
+
+        &__link {
+            display: block;
+            margin: 10px auto;
+            width: 10%;
+        }
+    }
+}
