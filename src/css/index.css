@@ -408,21 +408,21 @@ textarea {
 
 @font-face {
   font-family: "Montserrat Regular";
-  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts//montserrat-regular/montserrat.woff2") format("woff2"), url("../fonts//montserrat-regular/montserrat.woff") format("woff"), url("../fonts//montserrat-regular/montserrat.ttf") format("truetype");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/montserrat-regular/montserrat.woff2") format("woff2"), url("../fonts/montserrat-regular/montserrat.woff") format("woff"), url("../fonts/montserrat-regular/montserrat.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat Bold";
-  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts//montserrat-bold/montserratbold.woff2") format("woff2"), url("../fonts//montserrat-bold/montserratbold.woff") format("woff"), url("../fonts//montserrat-bold/Montserrat-Bold.ttf") format("truetype");
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/montserrat-bold/montserratbold.woff2") format("woff2"), url("../fonts/montserrat-bold/montserratbold.woff") format("woff"), url("../fonts/montserrat-bold/Montserrat-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat SemiBold";
-  src: local("Montserrat SemiBold"), local("Montserrat SemiBold"), url("../fonts//montserrat-semibold/Montserrat-SemiBold.ttf") format("truetype");
+  src: local("Montserrat SemiBold"), local("Montserrat SemiBold"), url("../fonts/montserrat-semibold/Montserrat-SemiBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap; }
